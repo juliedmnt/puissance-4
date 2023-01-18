@@ -1,0 +1,39 @@
+import tkinter as tk
+
+root=tk.Tk()
+
+h = 500
+w = 800
+diam = 60
+R = diam/2
+dx = 35
+dy = 20
+A=(a,b)=(130, 80)
+B=(a+diam, b+diam)
+
+
+canva = tk.Canvas(root, width = w, height = h, bg="white")
+
+def placerSupport():
+    canva.create_rectangle((100, 50), (700, 450), fill="light blue")
+    canva.create_rectangle((50, 480), (750, 450), fill="light blue")
+    A=(a,b)=(130, 80)
+    B=(a+diam, b+diam)
+    n = 6
+    for i in range(2):
+        a = dx
+        for j in range(n):
+            canva.create_oval(A, B, fill='beige', width=2)
+            A = (a + diam + dx, b)
+            a += diam + dx
+            B = (a+diam, b+diam)
+            print(A, B)
+        b+=diam+dy
+
+
+
+        
+print(placerSupport())
+
+canva.pack()
+root.mainloop()
