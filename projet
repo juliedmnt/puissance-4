@@ -20,7 +20,7 @@ def placerSupport():
     A=(a,b)=(130, 80)
     B=(a+diam, b+diam)
     n = 6
-    for i in range(2):
+    for i in range(4):
         a = dx
         for j in range(n):
             canva.create_oval(A, B, fill='beige', width=2)
@@ -29,8 +29,10 @@ def placerSupport():
             B = (a+diam, b+diam)
             print(A, B)
         b+=diam+dy
+        
+    canva.create_oval(A, B, fill='beige', width=2)
 
-
+    
 
         
 print(placerSupport())
